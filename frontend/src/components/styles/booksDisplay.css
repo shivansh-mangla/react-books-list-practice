@@ -1,0 +1,18 @@
+.book-display-div{
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+    width: 100%;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    align-items: stretch;
+    justify-content: center;
+    text-align: center;
+}
+
+.book-display-div h3{
+    grid-column: 1/4;
+}
