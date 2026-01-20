@@ -1,8 +1,11 @@
 import React, { useEffect } from 'react'
 import BooksDisplayCard from './BooksDisplayCard';
 import './styles/booksDisplay.css'
+import { useBooksState } from '../context/BooksContext';
 
-const BooksDisplay = ({booksList, editBookTitle, deleteBook}) => {
+const BooksDisplay = () => {
+
+    const booksList = useBooksState();
 
     useEffect(() => {
         console.log(booksList);
@@ -16,7 +19,7 @@ const BooksDisplay = ({booksList, editBookTitle, deleteBook}) => {
             <h3>Books List is empty!! Add new book below</h3>
             :
             booksList.map((book) => {
-                return <BooksDisplayCard book={book} editBookTitle={editBookTitle} deleteBook={deleteBook}/>
+                return <BooksDisplayCard book={book} key={book.id}/>
             })
         }
 

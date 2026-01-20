@@ -1,8 +1,13 @@
 import { useState } from "react";
 import "./styles/booksDisplayCard.css";
+import { useBooksActions } from "../context/BooksContext";
 
-const BooksDisplayCard = ({ book, editBookTitle, deleteBook }) => {
+const BooksDisplayCard = ({ book}) => {
+
   const { id, title } = book;
+
+
+  const {editBookTitle, deleteBook} = useBooksActions();
 
   const [isEditing, setIsEditing] = useState(false);
   const [editedTitle, setEditedTitle] = useState(title);

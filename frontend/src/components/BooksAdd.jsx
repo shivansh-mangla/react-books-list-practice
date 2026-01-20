@@ -1,9 +1,9 @@
 import React from 'react'
 import { useAddBookForm } from '../hooks/useAddBookForm'
 
-const BooksAdd = ({addNewBook}) => {
+const BooksAdd = () => {
 
-  const {title, setTitle, handleSubmit}  = useAddBookForm(addNewBook);
+  const {title, setTitle, handleSubmit}  = useAddBookForm();
 
   return (
     <div className='books-add-div'>
