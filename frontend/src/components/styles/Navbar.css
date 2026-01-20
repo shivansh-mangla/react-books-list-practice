@@ -1,0 +1,15 @@
+.navbar{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+
+    background-color: rgba(0, 0, 80, 0.9);
+    color: white;
+}
+
+.navbar h2{
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+}

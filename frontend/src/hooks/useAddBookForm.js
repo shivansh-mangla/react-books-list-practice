@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
+import { useBooksActions } from '../context/BooksContext';
 
-export const useAddBookForm = (addNewBook) => {
+export const useAddBookForm = () => {
+
+    const {addNewBook} = useBooksActions();
 
     const [title, setTitle] = useState("");
 
