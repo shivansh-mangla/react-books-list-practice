@@ -56,7 +56,7 @@ export const useBooks = () => {
     //PUT edit title
     const editBookTitle = async (newTitle, bookId) => {
 
-        const res = fetch(`${API_URL}/${bookId}`, {
+        const res = await fetch(`${API_URL}/${bookId}`, {
             method: "PATCH",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({title: newTitle})
